@@ -9,9 +9,10 @@ const PORT = process.env.PORT || 3000;
 
 
 const userRoutes = require('./Routes/userRoutes');
+const candidateRoutes = require('./Routes/candidateRoutes');
 
 app.use('/user', userRoutes);
-
+app.use('/candidate', candidateRoutes);
 
 
 
