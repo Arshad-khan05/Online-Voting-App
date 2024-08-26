@@ -40,7 +40,7 @@ router.post('/', jwtAuthMiddleware, async (req, res) =>{
 
 router.put('/:candidateID', jwtAuthMiddleware, async (req, res)=>{
     try{
-        if(!checkAdminRole(req.user.id))
+        if(!(await checkAdminRole(req.user.id)))
             return res.status(403).json({message: 'user does not have admin role'});
         
         const candidateID = req.params.candidateID; // Extract the id from the URL parameter
@@ -65,7 +65,7 @@ router.put('/:candidateID', jwtAuthMiddleware, async (req, res)=>{
 
 router.delete('/:candidateID', jwtAuthMiddleware, async (req, res)=>{
     try{
-        if(!checkAdminRole(req.user.id))
+        if(!(await checkAdminRole(req.user.id)))
             return res.status(403).json({message: 'user does not have admin role'});
         
         const candidateID = req.params.candidateID; // Extract the id from the URL parameter
@@ -127,10 +127,10 @@ router.get('/vote/:candidateID', jwtAuthMiddleware, async (req, res)=>{
 });
 
 // vote count 
-router.get('/vote/count', async (req, res) => {
+router.get('/result', async (req, res) => {
     try{
         // Find all candidates and sort them by voteCount in descending order
-        const candidate = await Candidate.find().sort({voteCount: 'desc'});
+        const candidate = await Candidate.find();
 
         // Map the candidates to only return their name and voteCount
         const voteRecord = candidate.map((data)=>{
