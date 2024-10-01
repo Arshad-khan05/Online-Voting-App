@@ -16,7 +16,8 @@ To interact with the API, please use Postman or a similar tool to send HTTP requ
 - **Password Management:** Users can change their password.
 - **JWT Token Authorization:** Secure endpoints using JWT-based authentication.
 
-## Result
+## Results
+
 <table>
     <tr>
         <td><img src="Output/Image01.png" alt="Example Image 1" style="width: 100%;"></td>
