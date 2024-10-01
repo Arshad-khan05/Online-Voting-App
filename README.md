@@ -16,6 +16,22 @@ To interact with the API, please use Postman or a similar tool to send HTTP requ
 - **Password Management:** Users can change their password.
 - **JWT Token Authorization:** Secure endpoints using JWT-based authentication.
 
+## Result
+<table>
+    <tr>
+        <td><img src="Output/Image01.png" alt="Example Image 1" style="width: 100%;"></td>
+        <td><img src="Output/Image03.png" alt="Example Image 2" style="width: 100%;"></td>
+    </tr>
+    <tr>
+        <td><img src="Output/Image02.png" alt="Example Image 1" style="width: 100%;"></td>
+        <td><img src="Output/Image04.png" alt="Example Image 2" style="width: 100%;"></td>
+    </tr>
+    <tr>
+        <td><img src="Output/Image05.png" alt="Example Image 1" style="width: 100%;"></td>
+        <td><img src="Output/Image06.png" alt="Example Image 2" style="width: 100%;"></td>
+    </tr>
+</table>
+
 ## Technologies Used
 
 - **Node.js** with **Express** for server-side logic.
